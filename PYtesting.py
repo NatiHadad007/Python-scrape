@@ -53,7 +53,6 @@ def fetch_html_content(url, proxies):
             if response.status_code == 200:
                 return response.text
         except Exception as e:
-            # time.sleep(random.randint(5, 10))
             print(f"Failed to scrape using: {proxy}")
     return None
 
@@ -74,7 +73,7 @@ def extract_brand_name(url):
     parsed_url = urlparse(url)
     path_parts = parsed_url.path.split('/')
     if len(path_parts) > 3:
-        return path_parts[3]  # Extracting the brand name part from the URL
+        return path_parts[3] 
     return None
 
 def fetching_plans_and_pricing(urls):
