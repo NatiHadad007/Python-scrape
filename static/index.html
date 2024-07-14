@@ -42,7 +42,7 @@
       for (let i = 0; i < data.length; i++) {
         console.log("Appending item:", data[i]);
         let li = document.createElement("li");
-        li.innerHTML = `Brand Name: ${data[i].brand} : Plan: ${data[i].plan} : Price: ${data[i].price}`;
+        li.innerHTML = `${data[i].brand} : Plan: ${data[i].plan} : Price: ${data[i].price}`;
         mainContainer.appendChild(li);
       }
     }
