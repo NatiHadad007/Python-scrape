@@ -102,13 +102,29 @@ def fetching_plans_and_pricing(urls):
 
 def save_data_to_json(data, filename="data.json"):
     try:
-        with open(filename, "w", encoding="utf-8") as file:
+        with open("static/"+ filename, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
-        print(f"Data saved: {data}")
     except Exception as e:
         print(f"An error occurred while saving data to JSON. Error: {str(e)}")
 
 if __name__ == "__main__":
+    url = "https://www.capterra.com/ecommerce-software/"
+    proxies = get_proxies()
+    html_content = fetch_html_content(url, proxies)
+
+    if html_content:
+        print("HTML content fetched successfully")
+        hrefs = extract_domain_prices(html_content)
+        if hrefs:
+            print("Extracted domain prices URLs successfully")
+            fetching_plans_and_pricing(hrefs)
+        else:
+            print("No domain prices URLs found")
+    else:
+        print("Failed to retrieve HTML content. Please check your internet connection or try again later.")
+
+
+def run_script():
     url = "https://www.capterra.com/ecommerce-software/"
     proxies = get_proxies()
     html_content = fetch_html_content(url, proxies)
