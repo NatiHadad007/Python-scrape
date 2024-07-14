@@ -1,5 +1,6 @@
 from flask import Flask
 from PYtesting import run_script
+import os
 
 app = Flask(__name__, static_folder='static')
 
@@ -14,8 +15,8 @@ def json():
 @app.route("/run")
 def run():
     run_script()
-    app.logger.info("Running script...")
     return "<p>Script run!</p>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
