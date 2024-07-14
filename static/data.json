@@ -1,0 +1,72 @@
+[
+    {
+        "brand": "ewiz-commerce",
+        "plan": "Startup",
+        "price": "$500"
+    },
+    {
+        "brand": "Wix",
+        "plan": "Combo",
+        "price": "$16"
+    },
+    {
+        "brand": "Wix",
+        "plan": "Unlimited",
+        "price": "$22"
+    },
+    {
+        "brand": "Wix",
+        "plan": "VIP",
+        "price": "$45"
+    },
+    {
+        "brand": "Wix",
+        "plan": "Business Basic",
+        "price": "$27"
+    },
+    {
+        "brand": "Wix",
+        "plan": "Business Unlimited",
+        "price": "$32"
+    },
+    {
+        "brand": "Wix",
+        "plan": "Business VIP",
+        "price": "$59"
+    },
+    {
+        "brand": "Shopify",
+        "plan": "Basic",
+        "price": "$29"
+    },
+    {
+        "brand": "Shopify",
+        "plan": "Shopify",
+        "price": "$79"
+    },
+    {
+        "brand": "Shopify",
+        "plan": "Advanced",
+        "price": "$299"
+    },
+    {
+        "brand": "Squarespace",
+        "plan": "Personal",
+        "price": "$16"
+    },
+    {
+        "brand": "Squarespace",
+        "plan": "Business",
+        "price": "$23"
+    },
+    {
+        "brand": "Squarespace",
+        "plan": "Commerce Basic",
+        "price": "$27"
+    },
+    {
+        "brand": "Squarespace",
+        "plan": "Commerce Advanced",
+        "price": "$49"
+    }
+]
