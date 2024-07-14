@@ -21,8 +21,14 @@
     ul {
       list-style: none;
     }
+
+    h1 {
+      font-size: larger;
+      padding-left: 40px;
+    }
   </style>
   <body>
+    <h1>Sonay Brands Plans</h1>
     <ul id="myData"></ul>
   </body>
   <script type="text/javascript">
@@ -34,6 +40,10 @@
         appendData(data);
       })
       .catch(function (err) {
+        let mainContainer = document.getElementById("myData");
+        let li = document.createElement("li");
+        li.innerHTML = `Loading data...`;
+        mainContainer.appendChild(li);
         console.log("error: " + err);
       });
 
