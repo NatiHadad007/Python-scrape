@@ -6,7 +6,7 @@ import json
 from urllib.parse import urlparse
 import requests
 
-proxy_api = 'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all'
+proxy_api = 'https://proxy.webshare.io/api/v2/profile/'
 
 
 user_agents = [
@@ -17,7 +17,7 @@ user_agents = [
 
 def get_proxies():
     try:
-        response = requests.get(proxy_api)
+        response = requests.get("https://proxy.webshare.io/api/v2/profile/",headers={ "Authorization": "akxsv4culunyxh7t4wgdoz4cl9q9f8pf2vg2g4k4" })
         if response.status_code == 200:
             proxies = response.text.splitlines()
             return proxies
@@ -49,7 +49,7 @@ def fetch_html_content(url, proxies):
         }
 
         try:
-            response = scraper.get(url, proxies={"https": proxy}, headers=headers)
+            response = scraper.get(url, proxies={"http": proxy}, headers=headers)
             if response.status_code == 200:
                 return response.text
         except Exception as e:
