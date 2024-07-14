@@ -1,15 +1,15 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 from PYtesting import run_script
 import os
 
 app = Flask(__name__, static_folder='static')
 
 @app.route("/")
-def hello_world():
-    return app.send_static_file('index.html')
+def home():
+    return redirect(url_for('run'))
 
 @app.route("/data.json")
-def json():
+def data_json():
     return app.send_static_file('data.json')
 
 @app.route("/run")
