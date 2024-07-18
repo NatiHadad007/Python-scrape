@@ -1,8 +1,10 @@
 from flask import Flask
+from flask_cors import CORS
 from PYtesting import run_script
 import os
 
 app = Flask(__name__, static_folder='static')
+CORS(app)
 
 @app.route("/")
 @app.route("/index.html")
